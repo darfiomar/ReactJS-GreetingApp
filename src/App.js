@@ -16,7 +16,7 @@ class App extends Component {
   
   handleSubmit(event) {
     const url = 'https://darfiomar-tpspring.herokuapp.com/api/greeting/' + this.state.value;
-    setTimeout(() => {
+    //setTimeout(() => {
        fetch(url)
           .then(res => res.json())
           .then(json => {
@@ -28,7 +28,7 @@ class App extends Component {
             console.log("Error: "+err.message);
           });
          // waits until the request completes...
-    }, 1500);
+    //}, 1500);
     const { items } = this.state;
     console.log(items);
     alert(items.content);    
